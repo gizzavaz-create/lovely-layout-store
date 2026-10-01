@@ -58,7 +58,7 @@ function Index() {
         </div>
         <div className="relative">
           <div className="absolute -inset-4 -z-10 rounded-[2.5rem] bg-secondary" />
-          <img src={hero} alt="Produtos selecionados GI INDICA" width={1200} height={1400} className="aspect-[6/7] w-full rounded-[2rem] object-cover shadow-lift" />
+          <img src={hero} alt="Produtos selecionados GI INDICA" width={1200} height={1408} className="aspect-[6/7] w-full rounded-[2rem] object-cover shadow-lift" />
         </div>
       </section>
 
