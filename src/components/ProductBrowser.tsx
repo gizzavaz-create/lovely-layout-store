@@ -38,9 +38,17 @@ export function ProductBrowser({ fixedCategory }: { fixedCategory?: string }) {
           {CATEGORIES.map((c) => <button key={c.slug} className={chip(cat === c.slug)} onClick={() => setCat(c.slug)}>{c.name}</button>)}
         </div>
       )}
-      <div className="flex gap-2 overflow-x-auto pb-1 md:justify-center">
-        <button className={chip(!plat)} onClick={() => setPlat("")}>Todas plataformas</button>
-        {PLATFORMS.map((p) => <button key={p} className={chip(plat === p)} onClick={() => setPlat(p)}>{p}</button>)}
+      <div role="tablist" className="flex gap-1 overflow-x-auto border-b border-border md:justify-center">
+        {["", ...PLATFORMS].map((p) => {
+          const count = data.filter((x) => (!category || x.category === category) && (!p || x.platform === p)).length;
+          const active = plat === p;
+          return (
+            <button key={p || "all"} role="tab" aria-selected={active} onClick={() => setPlat(p)}
+              className={`shrink-0 -mb-px border-b-2 px-4 py-3 text-sm font-medium transition ${active ? "border-primary text-foreground" : "border-transparent text-muted-foreground hover:text-foreground"}`}>
+              {p || "Todas"} <span className="ml-1 rounded-full bg-secondary px-2 py-0.5 text-xs">{count}</span>
+            </button>
+          );
+        })}
       </div>
       {isLoading ? (
         <p className="py-10 text-center text-muted-foreground">Carregando...</p>
