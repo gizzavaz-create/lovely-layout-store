@@ -6,7 +6,7 @@ export const CATEGORIES = [
   { slug: "achadinhos", name: "Achadinhos", emoji: "✦" },
 ] as const;
 
-export const PLATFORMS = ["TikTok Shop", "Shopee", "Hotmart", "Kiwify", "Outra"] as const;
+export const PLATFORMS = ["TikTok Shop", "Shopee", "Mercado Livre", "Amazon", "Shein", "Hotmart", "Kiwify", "Outra"] as const;
 
 // Troque pelo seu número (DDI + DDD + número, só dígitos)
 export const WHATSAPP_NUMBER = "5511999999999";
