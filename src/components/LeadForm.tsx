@@ -26,7 +26,7 @@ export function LeadForm() {
   async function onSubmit(e: React.FormEvent) {
     e.preventDefault();
     const parsed = schema.safeParse({ name, contact });
-    if (!parsed.success) return setError(parsed.error.issues[0].message);
+    if (!parsed.success) return setError(parsed.error.issues[0]?.message);
     setError(null);
     setLoading(true);
     const { error } = await supabase.from("leads").insert(parsed.data);

@@ -65,13 +65,13 @@ function Login() {
   async function submit(e: React.FormEvent) {
     e.preventDefault();
     const p = z.object({ email: z.string().trim().email(), password: z.string().min(6) }).safeParse({ email, password });
-    if (!p.success) return toast.error("E-mail válido e senha com 6+ caracteres");
+    if (!p.success) return void toast.error("E-mail válido e senha com 6+ caracteres");
     setLoading(true);
     const res = mode === "in"
       ? await supabase.auth.signInWithPassword(p.data)
       : await supabase.auth.signUp({ ...p.data, options: { emailRedirectTo: `${window.location.origin}/admin` } });
     setLoading(false);
-    if (res.error) return toast.error(res.error.message);
+    if (res.error) return void toast.error(res.error.message);
     if (mode === "up" && !res.data.session) toast.success("Conta criada! Confirme pelo link enviado ao seu e-mail.");
   }
 
@@ -126,11 +126,11 @@ function Dashboard() {
   async function save(e: React.FormEvent) {
     e.preventDefault();
     const parsed = productSchema.safeParse({ ...form, price: form.price === "" ? null : Number(form.price.replace(",", ".")) });
-    if (!parsed.success) return toast.error(parsed.error.issues[0].message);
+    if (!parsed.success) return void toast.error(parsed.error.issues[0]?.message);
     const { error } = editing === "new"
       ? await supabase.from("products").insert(parsed.data)
       : await supabase.from("products").update(parsed.data).eq("id", editing!);
-    if (error) return toast.error(error.message);
+    if (error) return void toast.error(error.message);
     toast.success("Produto salvo!");
     setEditing(null);
     qc.invalidateQueries({ queryKey: ["products"] });
@@ -139,7 +139,7 @@ function Dashboard() {
   async function remove(id: string) {
     if (!confirm("Remover este produto?")) return;
     const { error } = await supabase.from("products").delete().eq("id", id);
-    if (error) return toast.error(error.message);
+    if (error) return void toast.error(error.message);
     qc.invalidateQueries({ queryKey: ["products"] });
   }
 
