@@ -18,8 +18,8 @@ async function pageInfo(url: string) {
   }
 }
 
-export async function extractProduct(input: { url?: string; text?: string; image?: string }): Promise<Extracted> {
-  const apiKey = process.env.LOVABLE_API_KEY;
+export async function extractProduct(input: { url?: string | undefined; text?: string | undefined; image?: string | undefined }): Promise<Extracted> {
+  const apiKey = process.env["LOVABLE_API_KEY"];
   if (!apiKey) throw new Error("Chave de IA ausente.");
   const page = input.url ? await pageInfo(input.url) : null;
 
