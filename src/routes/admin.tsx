@@ -8,6 +8,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { productsQuery, type Product } from "@/lib/products";
 import { CATEGORIES, PLATFORMS, categoryName, formatPrice } from "@/lib/catalog";
 import { Logo } from "@/components/SiteChrome";
+import { AiProductFill } from "@/components/AiProductFill";
 import { Pencil, Trash2, Plus, LogOut, Star } from "lucide-react";
 
 export const Route = createFileRoute("/admin")({
@@ -171,6 +172,16 @@ function Dashboard() {
       {tab === "produtos" && editing && (
         <form onSubmit={save} className="mb-8 grid gap-3 rounded-2xl bg-card p-6 shadow-soft md:grid-cols-2">
           <h2 className="text-xl md:col-span-2">{editing === "new" ? "Novo produto" : "Editar produto"}</h2>
+          <AiProductFill onResult={(r) => setForm((f) => ({
+            ...f,
+            name: r.name || f.name,
+            description: r.description || f.description,
+            category: r.category || f.category,
+            platform: r.platform || f.platform,
+            price: r.price != null ? String(r.price).replace(".", ",") : f.price,
+            image_url: r.image_url || f.image_url,
+            affiliate_url: r.url || f.affiliate_url,
+          }))} />
           <input className={input} placeholder="Nome" value={form.name} onChange={(e) => set("name", e.target.value)} />
           <input className={input} placeholder="Preço (ex: 49,90)" value={form.price} onChange={(e) => set("price", e.target.value)} />
           <input className={`${input} md:col-span-2`} placeholder="URL da imagem" value={form.image_url} onChange={(e) => set("image_url", e.target.value)} />
