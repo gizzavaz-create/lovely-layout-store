@@ -8,3 +8,5 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+
+- Store additional product photos in products.image_urls and render them through ProductGallery using the shared Embla carousel; this preserves galleries across catalog surfaces and admin edits.
