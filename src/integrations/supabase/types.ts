@@ -45,6 +45,7 @@ export type Database = {
           featured: boolean
           id: string
           image_url: string
+          image_urls: string[]
           name: string
           platform: string
           price: number | null
@@ -58,6 +59,7 @@ export type Database = {
           featured?: boolean
           id?: string
           image_url?: string
+          image_urls?: string[]
           name: string
           platform: string
           price?: number | null
@@ -71,6 +73,7 @@ export type Database = {
           featured?: boolean
           id?: string
           image_url?: string
+          image_urls?: string[]
           name?: string
           platform?: string
           price?: number | null
