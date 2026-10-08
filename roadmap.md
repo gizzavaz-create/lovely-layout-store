@@ -3,4 +3,4 @@
 - [x] Preserve the nine uploaded Revita Beauty photos and update the existing affiliate link.
 - [x] Render the product photo carousel in catalog cards.
 - [x] Verify the carousel and purchase link in Suplementos → TikTok Shop.
-- [ ] Add the six-photo facial brush gallery and affiliate link in Beleza → TikTok Shop and verify it.
+- [x] Add the six-photo facial brush gallery and affiliate link in Beleza → TikTok Shop and verify it.
