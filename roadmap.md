@@ -6,3 +6,4 @@
 - [x] Add the six-photo facial brush gallery and affiliate link in Beleza → TikTok Shop and verify it.
 - [x] Add Protocolo Mulher Assumida with its cover and affiliate link in Cursos e Ebooks → Hotmart and verify it.
 - [x] Add Mochila JIESIPOTE with its 8-photo carousel and affiliate link in Achadinhos → TikTok Shop and verify it.
+- [x] Add Tênis Meia Feminino Casual with its 8-photo carousel and affiliate link in Achadinhos → TikTok Shop and verify it.
