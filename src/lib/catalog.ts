@@ -2,6 +2,7 @@ export const CATEGORIES = [
   { slug: "beleza", name: "Beleza", emoji: "✿" },
   { slug: "suplementos", name: "Suplementos", emoji: "◐" },
   { slug: "casa-e-decoracao", name: "Casa e Decoração", emoji: "⌂" },
+  { slug: "vestuario", name: "Vestuário", emoji: "✂" },
   { slug: "cursos-e-ebooks", name: "Cursos e Ebooks", emoji: "❧" },
   { slug: "achadinhos", name: "Achadinhos", emoji: "✦" },
 ] as const;
