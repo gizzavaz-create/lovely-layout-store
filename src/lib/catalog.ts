@@ -3,6 +3,7 @@ export const CATEGORIES = [
   { slug: "suplementos", name: "Suplementos", emoji: "◐" },
   { slug: "casa-e-decoracao", name: "Casa e Decoração", emoji: "⌂" },
   { slug: "vestuario", name: "Vestuário", emoji: "✂" },
+  { slug: "eletronicos", name: "Eletrônicos", emoji: "⚡" },
   { slug: "cursos-e-ebooks", name: "Cursos e Ebooks", emoji: "❧" },
   { slug: "achadinhos", name: "Achadinhos", emoji: "✦" },
 ] as const;

@@ -7,3 +7,4 @@
 - [x] Add Protocolo Mulher Assumida with its cover and affiliate link in Cursos e Ebooks → Hotmart and verify it.
 - [x] Add Mochila JIESIPOTE with its 8-photo carousel and affiliate link in Achadinhos → TikTok Shop and verify it.
 - [x] Add Tênis Meia Feminino Casual with its 8-photo carousel and affiliate link in Achadinhos → TikTok Shop and verify it.
+- [x] Create Eletrônicos category and add Depilador Feminino 4 em 1 with its 6-photo carousel and affiliate link in Eletrônicos → TikTok Shop, then verify it.
