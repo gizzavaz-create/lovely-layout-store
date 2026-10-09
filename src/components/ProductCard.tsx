@@ -1,12 +1,30 @@
 import type { Product } from "@/lib/products";
 import { trackClick } from "@/lib/products";
 import { categoryName, formatPrice } from "@/lib/catalog";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, Forward } from "lucide-react";
 import { ProductGallery } from "./ProductGallery";
 import { Button } from "@/components/ui/button";
 
 export function ProductCard({ p }: { p: Product }) {
   const images = p.image_urls?.filter(Boolean) ?? [];
+
+  async function shareProduct() {
+    const text = `Olha esse produto que a GI indicou: ${p.name}`;
+    if (typeof navigator !== "undefined" && navigator.share) {
+      try {
+        await navigator.share({ title: p.name, text, url: p.affiliate_url });
+        return;
+      } catch {
+        /* usuário cancelou ou falhou — cai no fallback */
+      }
+    }
+    window.open(
+      `https://wa.me/?text=${encodeURIComponent(`${text}\n${p.affiliate_url}`)}`,
+      "_blank",
+      "noopener,noreferrer",
+    );
+  }
+
   return (
     <article className="group flex flex-col overflow-hidden rounded-2xl bg-card shadow-soft transition hover:-translate-y-1 hover:shadow-lift">
       <div className="relative overflow-hidden bg-secondary">
