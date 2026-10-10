@@ -10,3 +10,4 @@
 - [x] Create Eletrônicos category and add Depilador Feminino 4 em 1 with its 6-photo carousel and affiliate link in Eletrônicos → TikTok Shop, then verify it.
 - [x] Add Cílios Tufos Individuais Wispy Light with its 6-photo carousel and affiliate link in Beleza → TikTok Shop and verify it.
 - [x] Add Espelho Orgânico Nuvem Florence 70x50cm with its 6-photo carousel and affiliate link in Casa e Decoração → TikTok Shop and verify it.
+- [x] Add Jogo de Lençol Estampado 400 fios with its 6-photo carousel and affiliate link in Casa e Decoração → TikTok Shop and verify it.
