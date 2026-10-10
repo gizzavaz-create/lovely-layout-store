@@ -8,3 +8,4 @@
 - [x] Add Mochila JIESIPOTE with its 8-photo carousel and affiliate link in Achadinhos → TikTok Shop and verify it.
 - [x] Add Tênis Meia Feminino Casual with its 8-photo carousel and affiliate link in Achadinhos → TikTok Shop and verify it.
 - [x] Create Eletrônicos category and add Depilador Feminino 4 em 1 with its 6-photo carousel and affiliate link in Eletrônicos → TikTok Shop, then verify it.
+- [ ] Add Cílios Tufos Individuais Wispy Light with its 6-photo carousel and affiliate link in Beleza → TikTok Shop and verify it.
